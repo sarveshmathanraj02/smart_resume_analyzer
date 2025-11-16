@@ -10,3 +10,5 @@ plotly==5.18.0
 protobuf==4.25.2
 altair==4.2.2
 toml==0.10.2
+watchdog
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
