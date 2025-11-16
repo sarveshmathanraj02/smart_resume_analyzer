@@ -2,6 +2,7 @@ services:
   - type: web
     name: smart-resume-analyzer
     env: python
-    buildCommand: ""
-    startCommand: streamlit run main.py --server.port $PORT --server.address 0.0.0.0
     plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run Main.py --server.port=$PORT"
+    pythonVersion: 3.11
