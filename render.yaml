@@ -4,4 +4,5 @@ services:
     env: python
     buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
     startCommand: "streamlit run main.py --server.port=$PORT --server.address=0.0.0.0"
-    pythonVersion: 3.11
+    
+
