@@ -1,38 +1,24 @@
-# db_connection.py
-import pymysql
+import pymysql 
 
-DB_HOST = 'localhost'
+DB_HOST = 'mysql.railway.internal'
+DB_PORT = int('3306')
 DB_USER = 'root'
-DB_PASSWORD = 'Sarvesh0209'
-DB_NAME = 'sra'
+DB_PASSWORD = 'bIkYSqHLCIThFNtXAGOHxulwtPFGzubi'
+DB_NAME = 'railway'
 
-
-def create_database():
-    """Create the database if it does not exist."""
-    conn = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD)
-    cursor = conn.cursor()
-    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
-    conn.commit()
-    conn.close()
-
-
-def connect_to_db():
-    """Connect to the database after ensuring it exists."""
-    create_database()  # ← VERY IMPORTANT
+def connect_to_db():  
     connection = pymysql.connect(
         host=DB_HOST,
         user=DB_USER,
         password=DB_PASSWORD,
-        db=DB_NAME
+        db=DB_NAME,
+        port=DB_PORT
     )
     return connection
 
-
 def create_table():
-    """Create the user_data table if it does not exist."""
     connection = connect_to_db()
     cursor = connection.cursor()
-
     table_sql = """
         CREATE TABLE IF NOT EXISTS user_data(
             ID INT NOT NULL AUTO_INCREMENT,
