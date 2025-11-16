@@ -5,4 +5,4 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run main.py --server.port $PORT --server.address 0.0.0.0
-    pythonVersion: 3.10.12
+    pythonVersion: 3.10
