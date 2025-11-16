@@ -1,10 +1,7 @@
 services:
   - type: web
-    name: smart-resume-analyzer
-    env: docker
-    plan: free
-    autoDeploy: true
-    dockerfilePath: ./Dockerfile  # Make sure this path is correct
-    envVars:
-      - key: PORT
-        value: 8501
+    name: smart_resume_analyzer
+    env: python
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "streamlit run main.py --server.port=$PORT --server.address=0.0.0.0"
+    pythonVersion: 3.11
