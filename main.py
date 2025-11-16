@@ -341,10 +341,10 @@ def run():
                    total_structure_criteria = 3
                    resume_score = calculate_resume_score(basic_info, extracted_skills, total_keywords, total_structure_criteria)
                    st.subheader("Resume Score")
-                   st.write(f"{resume_score}")
+                   st.write(f"*{resume_score}*")
                    experience_level = determine_level(resume_text, extracted_skills)
                    st.subheader("Experience Level")
-                   st.write(f"Based on the analysis, you are categorized as: {experience_level}")
+                   st.write(f"Based on the analysis, you are categorized as: *{experience_level}*")
                    rec_courses = course_recommender(extracted_skills, role)
                    display_videos()
                    timestamp = pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
