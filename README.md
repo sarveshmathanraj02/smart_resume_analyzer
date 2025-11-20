@@ -8,13 +8,12 @@ The app extracts key information from resumes, evaluates candidate skills, recom
 ## 📁 Repository Structure
 
 smart_resume_analyzer/  
-│  
-├── main.py                 # Main Streamlit application  
-├── db_connection.py        # MySQL connection & table creation  
-├── admin.py                # Admin dashboard & analytics  
-├── courses.py              # Course & video datasets  
-├── requirements.txt        # Libraries used  
-├── README.md               # Documentation   
+├── main.py                   
+├── db_connection.py          
+├── admin.py                  
+├── courses.py                
+├── requirements.txt          
+├── README.md                  
 
 ---
 
